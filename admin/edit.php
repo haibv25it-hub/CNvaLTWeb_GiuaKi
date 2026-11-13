@@ -21,7 +21,6 @@ if (isset($_POST['update'])) {
     $images = $user['images'];
     $password = $_POST['admin_password'];
 
-    // Nếu chọn ảnh mới
     if (isset($_FILES['images']) && $_FILES['images']['error'] == 0) {
         $allowed = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
         $ext = strtolower(pathinfo($_FILES['images']['name'], PATHINFO_EXTENSION));
